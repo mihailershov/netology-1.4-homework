@@ -1,0 +1,64 @@
+* {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  background-color: #ededed;
+  max-width: 1420px;
+  margin: 0 auto;
+}
+.wrapper a {
+  color: black;
+}
+.wrapper .allwidth {
+  width: 100%;
+  background-color: #e0e0e0;
+  margin-bottom: 20px;
+}
+.wrapper .allwidth .back {
+  background-color: #c6c6c6;
+  display: inline-block;
+  padding: 20px;
+  transition: all 0.3s;
+}
+.wrapper .allwidth .back:hover {
+  background-color: #bababa;
+}
+.wrapper p {
+  padding-left: 20px;
+}
+.wrapper .random {
+  background-color: lightgrey;
+  padding: 10px;
+  margin: 20px 0;
+}
+.wrapper .random p {
+  display: inline-block;
+  line-height: inherit;
+  padding-left: 10px;
+}
+.wrapper form {
+  display: inline-block;
+}
+.wrapper form button, .wrapper form p {
+  display: inline-block;
+  line-height: inherit;
+}
+.wrapper form button {
+  height: 40px;
+  font-size: 1.3rem;
+  padding: 0 20px;
+}
+.wrapper form p {
+  background-color: white;
+  width: 300px;
+  height: 40px;
+}
+
+pre {
+  padding-left: 20px;
+}
+
+/*# sourceMappingURL=cityid.css.map */

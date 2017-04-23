@@ -1,0 +1,64 @@
+* {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 100%;
+}
+
+.wrapper {
+  background-color: #ededed;
+  max-width: 1420px;
+  margin: 0 auto;
+}
+.wrapper .form {
+  padding-bottom: 30px;
+  background-color: lightgrey;
+  display: flex;
+  flex-direction: column;
+}
+.wrapper .form form {
+  margin: 10px auto 0;
+}
+.wrapper .form form button, .wrapper .form form input {
+  padding: 5px;
+  line-height: inherit;
+}
+.wrapper .form .id {
+  font-size: 2.3rem;
+  text-align: center;
+  padding-top: 30px;
+}
+.wrapper .form .italic {
+  padding-top: 5px;
+  font-size: 0.7rem;
+  text-align: center;
+}
+.wrapper .form .example {
+  text-align: center;
+  padding-top: 10px;
+}
+.wrapper .weather {
+  padding: 40px 0;
+}
+.wrapper .weather h1 {
+  padding-bottom: 20px;
+  text-align: center;
+}
+.wrapper .weather p {
+  line-height: 2rem;
+  text-align: center;
+}
+.wrapper .weather a {
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+.wrapper .weather a:hover {
+  color: #b300b3;
+}
+.wrapper .error {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 1.3rem;
+}
+
+/*# sourceMappingURL=style.css.map */
