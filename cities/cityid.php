@@ -1,11 +1,11 @@
 <?php
 
 $stringCities = file_get_contents('stringCities.txt');
+$stringCitiesSlice = substr($stringCities, mt_rand(0, strlen($stringCities)), 30);
+$firstWrap = strpos($stringCitiesSlice, "\n");
+$secondWrap = strpos($stringCitiesSlice, "\n", $firstWrap + strlen("\n"));
 if (isset($_POST['randomCityButton'])) {
-    $cities = glob("cities/*.json");
-    $array = ['cities/', '.json'];
-    $arrayReplace = ['', ''];
-    $randomCity = ucfirst(str_replace($array, $arrayReplace, $cities[mt_rand(0, count($cities)-1)]));
+    $randomCity = substr($stringCitiesSlice, $firstWrap, $secondWrap - $firstWrap);
 }
 
 ?>
@@ -31,9 +31,9 @@ if (isset($_POST['randomCityButton'])) {
             <form action="cityid.php" method="POST">
                 <button type="submit" name="randomCityButton">Выбрать случайный город</button>
             </form>
-            <p><a href="../index.php?cityname=<?= $randomCity ?>"><?php if(isset($randomCity)) echo "$randomCity"; ?></a></p>
+            <p><a href="../index.php?cityname=<?= substr($randomCity, strpos($randomCity, ' '), -1) ?>"><?php if(isset($randomCity)) echo "$randomCity"; ?></a></p>
         </div>
-        <pre><?= $stringCities; ?></pre>
+        <pre><?php echo $stringCities; ?></pre>
     </div>
 </body>
 </html>
