@@ -3,7 +3,9 @@
 error_reporting(E_ALL);
 
 function isCityExist($city) {
-    if (file_exists(strtolower('cities/cities/' . $city . ".json")) ) {
+    $file = strtolower( file_get_contents('cities/stringCities.txt') );
+    $city = strtolower($city);
+    if (strpos($file, $city) !== false) {
         return true;
     }
 }
@@ -69,7 +71,7 @@ if (isset($_GET['cityname'])) {
         <p class="italic">все города, доступные в нашем сервисе,<br> можно посмотреть <a href="cities/cityid.php">здесь</a></p>
         <form action="index.php">
             <input type="text" placeholder="Введите город" value="" name="cityname" required>
-            <button type="confirm">Посмотреть погоду</button>
+            <button type="confirm">Поcмотреть погоду</button>
         </form>
     </div>
     <?php
